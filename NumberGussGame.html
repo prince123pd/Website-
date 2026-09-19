@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <style ></style>
+<body>
+  <div class ="main">
+    <label>enter your number 
+    <input type ="number" required></label>
+    <button>Play Game</button>
+    <p></p>
+  </div>
+  <script> 
+     const input=document.querySelector("input");
+    const bt=document.querySelector("button");
+    const msg=document.querySelector("p");
+    //generating random number 
+     let computerChoice=Math.floor(Math.random()*10)+1;
+    // envent trigger 
+    bt.addEventListener("click",()=>{
+      //taking user input 
+      const userChoice=parseInt(input.value);
+      if (userChoice>10){
+        msg.innerHTML="Plese enter valid number ";}
+        else if (userChoice>computerChoice){
+        msg.innerHTML="your choice is greater that computer choice ";
+        
+        }
+      else if(userChoice<computerChoice){
+        msg.innerHTML="your choice is less";
+        
+        
+      }
+      else{
+        msg.innerHTML="you win ";
+        computerChoice=Math.floor(Math.random()*10)+1;
+        
+      
+      }
+      input.value=null;
+      
+        
+      
+    })
+</script>
+</body>
+  
+</html>
