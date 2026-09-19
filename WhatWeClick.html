@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="choice_container" >
+    <div class="choice" id="rock">I am rock </div>
+    <div class="choice " id="paper">i am paper</div>
+    <div class="choice" id="sicisor">i am kachi</div>
+  </div>
+  <p></p>
+  <script>
+   const choices=document.querySelectorAll(".choice");
+    choices.forEach((choice)=>{
+      choice.addEventListener("click",()=>{
+        const elementId=choice.getAttribute("id");
+        document.querySelector("p").innerHTML=`you clicked ${elementId}`;
+      });
+    });
+  </script>
+</body>
+</html>
