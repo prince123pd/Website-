@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+  <h3>Print the table </h3>
+  <input type="number" placeholder="Enter here" required>
+  <button>Generate table </button>
+  <p></p>
+  <script>
+    const input=document.querySelector("input");
+    const btn=document.querySelector("button");
+    const msg=document.querySelector("p")
+    btn.addEventListener("click",()=>{
+      const n=parseInt(input.value);
+      if(isNaN(n)||n===0){
+        msg.innerHTML="invalid input";
+      }
+      else{
+        msg.innerHTML=null
+        for(let i=1;i<=10;i++){
+          msg.innerHTML+=`${n} X ${i} =${n*i} <br>`;
+          
+          
+        }
+        
+      }
+    });
+
+    
+  </script>
+  
+</body>
+
+</html>
